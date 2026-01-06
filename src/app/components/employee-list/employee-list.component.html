@@ -1,0 +1,38 @@
+<div class="employee-list-wrapper">
+
+  <h2 class="page-title">Employee List</h2>
+
+  <button class="add-btn" routerLink="/add">
+    Add Employee
+  </button>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-row" *ngFor="let emp of employees">
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.designation }}</td>
+        <td>{{ emp.salary }}</td>
+        <td class="action-cell">
+          <button class="btn edit-btn" (click)="editEmployee(emp.id)">
+            Edit
+          </button>
+          <button class="btn delete-btn" (click)="deleteEmployee(emp.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

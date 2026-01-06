@@ -1,0 +1,86 @@
+<div class="employee-form-wrapper">
+
+  <h2 class="form-title">
+    {{ isEdit ? 'Update Employee' : 'Add Employee' }}
+  </h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="employee-form">
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        class="form-input"
+      />
+      <div class="error-text" *ngIf="name?.touched && name?.invalid">
+        Name is required
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        class="form-input"
+      />
+      <div class="error-text" *ngIf="email?.touched && email?.invalid">
+        Valid email is required
+      </div>
+    </div>
+
+    <!-- Designation -->
+    <div class="form-group">
+      <label for="designation">Designation</label>
+      <input
+        id="designation"
+        type="text"
+        formControlName="designation"
+        class="form-input"
+      />
+      <div class="error-text" *ngIf="designation?.touched && designation?.invalid">
+        Designation is required
+      </div>
+    </div>
+
+    <!-- Salary -->
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input
+        id="salary"
+        type="number"
+        formControlName="salary"
+        class="form-input"
+      />
+      <div class="error-text" *ngIf="salary?.touched && salary?.invalid">
+        Salary must be greater than 0
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-actions">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="form.invalid"
+      >
+        {{ isEdit ? 'Update' : 'Save' }}
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+    </div>
+
+  </form>
+
+</div>
