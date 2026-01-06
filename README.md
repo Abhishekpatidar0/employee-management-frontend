@@ -1,27 +1,106 @@
-# EmployeeCrudFrontend
+# Employee Management System – Angular Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+This project is a **production-ready Angular 16 frontend** for an **Employee Management System**.
+It consumes a real **ASP.NET Core Web API backend** and performs complete CRUD operations.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tech Stack
 
-## Code scaffolding
+- Angular 16 (Standalone Components)
+- TypeScript
+- HTML5, CSS3
+- Angular Router
+- Reactive Forms
+- RxJS
+- REST API Integration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## ✨ Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- View all employees
+- Add new employee
+- Update existing employee details
+- Delete employee
+- Client-side form validation
+- Clean, responsive UI
+- Real backend API integration (no mock data)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🔗 Backend Integration
 
-## Running end-to-end tests
+This frontend consumes the following backend API:   http://localhost:5211/api/employees
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Backend is implemented using:
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> ⚠️ Backend must be running before using the frontend.
+
+---
+
+## 📦 Project Setup
+
+### 1️⃣ Install dependencies
+```bash
+npm install
+
+
+2️⃣ Run development server
+ng serve
+
+
+Open browser at:
+
+http://localhost:4200
+
+
+****The app will automatically reload if you change any source files.
+
+🛠️ Build
+To build the project for production:
+
+ng build
+
+
+*****Build artifacts will be stored in the dist/ directory.
+
+
+
+📂 Project Structure
+src/
+ ├── app/
+ │   ├── components/
+ │   │   ├── employee-list/
+ │   │   └── employee-form/
+ │   ├── services/
+ │   │   └── employee.service.ts
+ │   ├── models/
+ │   │   └── employee.model.ts
+ │   ├── app.component.*
+ │   └── app.routes.ts
+ ├── assets/
+ └── environments/
+
+
+
+🧠 Architecture Notes
+
+Uses Angular 16 standalone architecture
+No NgModule-based routing
+Centralized API service
+Clean separation of concerns
+Interview-safe and production-ready
+
+
+🧪 Testing
+Unit and E2E testing are not configured yet.
+
+
+👤 Author
+Abhishek Patidar
+Angular & .NET Full-Stack Developer
